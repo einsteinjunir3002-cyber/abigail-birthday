@@ -1,11 +1,398 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Happy Birthday Abigail 💖</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Pacifico&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;font-family:'DM Sans',sans-serif;color:#422a48;background:linear-gradient(135deg,#fff1f2,#fdf2f8 45%,#ede9fe);overflow-x:hidden}.top{min-height:100svh;display:grid;place-items:center;padding:24px;text-align:center}.top-inner{max-width:760px}.badge{display:inline-block;border:1px solid #ec4899;border-radius:999px;padding:9px 14px;color:#be185d;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.top h1{font-family:Pacifico,cursive;color:#c026d3;font-size:clamp(3rem,13vw,6.8rem);line-height:1.05;margin:18px 0;text-shadow:0 6px 26px rgba(192,38,211,.14)}.top p{font-size:clamp(1rem,3vw,1.2rem);line-height:1.7;max-width:650px;margin:auto}.home{display:inline-block;margin-top:24px;padding:13px 18px;border-radius:999px;background:#fff;text-decoration:none;color:#be185d;box-shadow:0 8px 30px rgba(190,24,93,.12);font-weight:800}
-main{max-width:1050px;margin:auto;padding:10px 16px 80px}.section-title{text-align:center;font-family:Pacifico,cursive;font-size:clamp(2rem,8vw,3.6rem);color:#d946ef;margin:54px 0 22px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.item{margin:0;overflow:hidden;border-radius:18px;background:#fff;box-shadow:0 12px 35px rgba(87,38,98,.13)}.item img,.item video{width:100%;height:min(58vw,420px);object-fit:cover;display:block;background:#eee}.item.wide{grid-column:1/-1}.item.wide img,.item.wide video{height:min(68vw,520px)}
-.letter{background:rgba(255,255,255,.92);border-radius:28px;padding:clamp(24px,6vw,48px);box-shadow:0 18px 50px rgba(87,38,98,.11);line-height:1.85;font-size:clamp(1rem,3vw,1.12rem)}.letter h2{font-family:Pacifico,cursive;color:#be185d;font-size:2.2rem}.letter strong{color:#be185d}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.fact{background:#fff1f7;border-radius:18px;padding:18px;text-align:center;font-weight:800}.fact span{display:block;font-size:28px;margin-bottom:6px}.toast{text-align:center;font-family:Pacifico,cursive;font-size:clamp(1.7rem,7vw,3.2rem);color:#c026d3;margin:58px 12px}
-@media(max-width:620px){.top{padding:22px 16px}.gallery{grid-template-columns:1fr}.item.wide{grid-column:auto}.item img,.item video{height:68vw}.facts{grid-template-columns:1fr}.letter{border-radius:22px}.home{min-height:48px}.section-title{margin-top:42px}}
-</style></head><body><header class="top"><div class="top-inner"><div class="badge">Official birthday transmission</div><h1>Abigail</h1><p>Abigail, you are that rare combination of beautiful, brilliant, funny and dangerous to my concentration. Your face card clearly does not accept rejected payments, and your smile should come with a government warning. But today is not about facts… okay, fine, it is. Fact one: you look amazing. Fact two: I’m already smiling typing this. Fact three: today is officially yours. 🎂✨</p><a class="home" href="index.html">← Back to the adventures</a></div></header><main><h2 class="section-title">The Abigail Lookbook</h2><div class="gallery" id="gallery"></div><h2 class="section-title">A completely serious speech</h2><article class="letter"><h2>Dear Abigail,</h2><p>Happy birthday to the sweetest plot twist in every ordinary day. I hope this year brings you all the love you give, all the luck you deserve, and at least three people who confidently agree that you are always right.</p><div class="facts"><div class="fact"><span>😌</span>You look unfairly good.</div><div class="fact"><span>🧠</span>Your mind is elite.</div><div class="fact"><span>💖</span>Your vibe is everything.</div></div><p><strong>Cocky disclaimer:</strong> anybody else may throw glitter. But you? You <em>are</em> the whole glitter. Anybody else may have jokes. You have the premium joke package, free delivery, and excellent timing.</p><p>May your cake be sweet, your photos be flattering, your surprises be good, and your life be full of soft moments, loud laughter and people who remind you exactly how special you are. I am, of course, among those people. I have excellent taste.</p><p>Here’s to new memories, bigger dreams, louder celebrations, and one very gorgeous birthday girl who absolutely did not need any of this persuasion. She already knows.</p></article><div class="toast">Keep shining, birthday queen. 👑</div></main><script>
-const pics=[...document.querySelectorAll('[data-none]')];
-fetchMedia();
-async function fetchMedia(){const files=[
-'WhatsApp Image 2026-11-22 at 10.19.11 AM.jpeg','WhatsApp Image 2026-11-22 at 10.19.12 AM (1).jpeg','WhatsApp Image 2026-11-22 at 10.19.12 AM.jpeg','WhatsApp Image 2026-11-22 at 10.19.13 AM (1).jpeg','WhatsApp Image 2026-11-22 at 10.19.13 AM (2).jpeg','WhatsApp Image 2026-11-22 at 10.19.13 AM.jpeg','WhatsApp Video 2026-11-24 at 8.16.38 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.17 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.20 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.27 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.35 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.38 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.40 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.48 PM.mp4','WhatsApp Video 2026-11-24 at 8.17.49 PM.mp4'];
-const g=document.getElementById('gallery');files.forEach((f,i)=>{const el=document.createElement('figure');el.className='item '+(i%5===0?'wide':'');const isVideo=f.toLowerCase().endsWith('.mp4');const m=document.createElement(isVideo?'video':'img');m.src='pics/'+encodeURI(f);if(isVideo){m.controls=true;m.playsInline=true;m.preload='metadata'}else m.alt='Abigail memory '+(i+1);el.appendChild(m);g.appendChild(el)})}
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0a0810">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Happy Birthday Abigail">
+    <meta name="description" content="A cinematic, sweet, flirty, and holographic birthday celebration for Abigail.">
+    <title>Happy Birthday Abigail ✨ | The Official Celebration</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&family=Fredoka+One&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* Mobile-First Custom Overrides for High-Resolution Abigail Lookbook */
+        .mobile-home-btn {
+            position: fixed;
+            top: max(16px, env(safe-area-inset-top));
+            left: 16px;
+            z-index: 9999;
+            background: rgba(255, 255, 255, 0.9);
+            color: #d81b60;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(255, 71, 126, 0.3);
+            transition: transform 0.2s;
+        }
+        .mobile-home-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Large Phone Media Cards */
+        @media (max-width: 650px) {
+            .gallery-grid-2035 {
+                grid-template-columns: 1fr !important;
+                gap: 22px !important;
+                padding: 10px 4px !important;
+            }
+            .gallery-card-2035 {
+                width: 100% !important;
+                min-height: 480px !important;
+                max-height: 580px !important;
+                aspect-ratio: 9/13 !important;
+                border-radius: 22px !important;
+            }
+            .timeline-card-2035 .snapshot-frame img,
+            .timeline-card-2035 .snapshot-frame video {
+                min-height: 380px !important;
+                max-height: 500px !important;
+                object-fit: cover !important;
+            }
+            .hero-section-2035 {
+                padding: 70px 16px 40px !important;
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            .hero-image-container {
+                width: 100% !important;
+                max-width: 320px !important;
+            }
+            .cinematic-title {
+                font-size: clamp(2rem, 9vw, 3rem) !important;
+            }
+            .venessa-name-glow {
+                font-size: clamp(2.8rem, 12vw, 4.2rem) !important;
+            }
+        }
+
+        /* Video Play Overlay Badge */
+        .video-card-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .tap-prompt-badge {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 71, 126, 0.85);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 999px;
+            backdrop-filter: blur(6px);
+            white-space: nowrap;
+            z-index: 3;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Home Link for Easy Mobile Navigation -->
+    <a href="index.html" class="mobile-home-btn">⬅ Back to Portal</a>
+
+    <!-- HOLOGRAPHIC BACKGROUND EFFECTS -->
+    <div class="holographic-bg"></div>
+    <div class="cosmic-grid"></div>
+    
+    <!-- PARTICLE & ANIMATION CONTAINERS -->
+    <div id="particlesContainer"></div>
+    <div id="floatingHearts"></div>
+    
+    <!-- FUTURISTIC LOADING SCREEN -->
+    <div id="loadingScreen" class="loading-screen-futuristic">
+        <div class="loading-container-2035">
+            <div class="loading-hologram">
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring"></div>
+                <div class="core-pulse"></div>
+            </div>
+            <p class="loading-text-futuristic">Initializing Abigail's Birthday Protocol...</p>
+            <div class="cyber-progress">
+                <div class="progress-glow"></div>
+                <div class="progress-bar-futuristic"></div>
+            </div>
+            <p class="loading-subtext">Calibrating dangerous cuteness & 100% flirty frequencies... ✨</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- HERO SECTION - CINEMATIC INTRO -->
+        <section id="heroSection" class="hero-section-2035">
+            <div class="hero-parallax-layer"></div>
+            <div class="hero-stars"></div>
+            
+            <!-- Cinematic Title with Neon Glow -->
+            <div class="hero-content-2035">
+                <h1 class="cinematic-title">
+                    <span class="title-glyph" data-text="H">H</span>
+                    <span class="title-glyph" data-text="A">A</span>
+                    <span class="title-glyph" data-text="P">P</span>
+                    <span class="title-glyph" data-text="P">P</span>
+                    <span class="title-glyph" data-text="Y">Y</span>
+                    <span class="title-glyph spacer" style="width: 0.3em;"></span>
+                    <span class="title-glyph" data-text="B">B</span>
+                    <span class="title-glyph" data-text="I">I</span>
+                    <span class="title-glyph" data-text="R">R</span>
+                    <span class="title-glyph" data-text="T">T</span>
+                    <span class="title-glyph" data-text="H">H</span>
+                    <span class="title-glyph" data-text="D">D</span>
+                    <span class="title-glyph" data-text="A">A</span>
+                    <span class="title-glyph" data-text="Y">Y</span>
+                </h1>
+                
+                <h2 class="venessa-name-glow">Abigail 👑</h2>
+                
+                <!-- Neon Subtitle -->
+                <p class="neon-subtitle">
+                    Today marks the global celebration of someone whose smile causes traffic jams, whose humor is delightfully dangerous, and whose face card refuses to decline in any economy! Abigail, you are certified 10/10 royalty. Consider yourself officially spoiled today! 💖✨
+                </p>
+                
+                <!-- CTA Button with Holographic Effect -->
+                <button class="holographic-button" id="beginBtn">
+                    <span class="button-inner">START THE CELEBRATION ⬇</span>
+                    <div class="button-glow-ring"></div>
+                    <div class="button-particles"></div>
+                </button>
+            </div>
+
+            <!-- Hero Image with Holographic Frame -->
+            <div class="hero-image-container">
+                <div class="holographic-frame">
+                    <img id="heroImage" src="pics/WhatsApp Image 2026-11-22 at 10.19.11 AM.jpeg" alt="Abigail - Birthday Queen" class="hero-portrait">
+                    <div class="glitch-effect"></div>
+                    <div class="frame-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Floating Holographic Elements -->
+            <div class="floating-holograms">
+                <div class="holo-element">👑</div>
+                <div class="holo-element">💖</div>
+                <div class="holo-element">✨</div>
+                <div class="holo-element">🎂</div>
+            </div>
+        </section>
+
+        <!-- STORY SECTION - HOLOGRAPHIC TIMELINE -->
+        <section id="storySection" class="story-section-2035">
+            <h2 class="section-title-2035">The Abigail Highlights // Visual Evidence</h2>
+            
+            <!-- Timeline with Memory Snapshots -->
+            <div class="holographic-timeline">
+                <div class="timeline-card-2035 memory-snapshot" data-image="pics/WhatsApp Image 2026-11-22 at 10.19.11 AM.jpeg">
+                    <div class="snapshot-frame">
+                        <img src="pics/WhatsApp Image 2026-11-22 at 10.19.11 AM.jpeg" alt="Abigail Radiance" class="snapshot-img">
+                        <div class="snapshot-overlay">The Royal Stunner</div>
+                    </div>
+                    <h3>Certified Face Card Royalty 🔥</h3>
+                    <p>Excuse me Miss Abigail, did you need a permit to look this good? That glow, that poise, and that effortless charm! If being this fine was a traffic violation, your license would have been revoked years ago!</p>
+                    <div class="timeline-glow"></div>
+                </div>
+                
+                <div class="timeline-card-2035 memory-snapshot" data-image="pics/WhatsApp Image 2026-11-22 at 10.19.12 AM (1).jpeg">
+                    <div class="snapshot-frame">
+                        <img src="pics/WhatsApp Image 2026-11-22 at 10.19.12 AM (1).jpeg" alt="Abigail Smile" class="snapshot-img">
+                        <div class="snapshot-overlay">Million Dollar Smile</div>
+                    </div>
+                    <h3>That Smile is a Public Hazard 😍</h3>
+                    <p>Warning: Staring directly at this photo causes elevated heart rates and uncontrollable grinning. How do you manage to look so ridiculously cute on a casual day? Teach us your ways, queen!</p>
+                    <div class="timeline-glow"></div>
+                </div>
+                
+                <div class="timeline-card-2035 memory-snapshot" data-image="pics/WhatsApp Image 2026-11-22 at 10.19.13 AM.jpeg">
+                    <div class="snapshot-frame">
+                        <img src="pics/WhatsApp Image 2026-11-22 at 10.19.13 AM.jpeg" alt="Abigail Glow" class="snapshot-img">
+                        <div class="snapshot-overlay">Unrivaled Aura</div>
+                    </div>
+                    <h3>Effortless Melanin & Pure Class ✨</h3>
+                    <p>Looking at this picture and wondering how someone can be this photogenic without even trying. The aura is immaculate, the vibe is top-shelf, and the beauty is completely off the charts!</p>
+                    <div class="timeline-glow"></div>
+                </div>
+                
+                <div class="timeline-card-2035 memory-snapshot" data-image="pics/WhatsApp Image 2026-11-22 at 10.19.12 AM.jpeg">
+                    <div class="snapshot-frame">
+                        <img src="pics/WhatsApp Image 2026-11-22 at 10.19.12 AM.jpeg" alt="Abigail Charm" class="snapshot-img">
+                        <div class="snapshot-overlay">Sweet Troublemaker</div>
+                    </div>
+                    <h3>The Sweetest Plot Twist 💖</h3>
+                    <p>That genuine sparkle in your eyes proves you're not just beautiful on the outside—you bring warmth, laughs, and pure sunshine wherever you go. Having you around is an absolute blessing!</p>
+                    <div class="timeline-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POEM / FLIRTY PROSE SECTION -->
+        <section id="poemSection" class="poem-section-2035">
+            <h2 class="section-title-2035">An Ode To Abigail // Flirty Rhymes</h2>
+            
+            <div class="poem-hologram">
+                <div class="poem-glitch"></div>
+                <div class="poem-text-2035">
+                    <p class="poem-line line-1">They searched across seven seas for someone truly divine,</p>
+                    <p class="poem-line line-2">And discovered that Abigail is on a whole different timeline!</p>
+                    <p class="poem-line line-3">A face card so lethal that economists are in despair,</p>
+                    <p class="poem-line line-4">With elegance and beauty that simply has no compare.</p>
+                    <br>
+                    <p class="poem-line line-5">Are you made of copper and tellurium? Because you are Cu-Te,</p>
+                    <p class="poem-line line-6">A 10/10 walking masterpiece that anyone would love to see.</p>
+                    <p class="poem-line line-7">Whether rocking casual looks or serving royal grace,</p>
+                    <p class="poem-line line-8">You bring effortless sunshine to every single place!</p>
+                    <br>
+                    <p class="poem-line line-9">A smile that can melt away the heaviest of storms,</p>
+                    <p class="poem-line line-10">And laughs that defy all standard earthly norms.</p>
+                    <p class="poem-line line-11">Cocky fact: having you around makes my taste look elite,</p>
+                    <p class="poem-line line-12">And cheesy truth: you make every single day feel complete.</p>
+                    <br>
+                    <p class="poem-line line-13">So here's to you, Abigail, on your very special day,</p>
+                    <p class="poem-line line-14">May joy, soft life, and luxury forever head your way!</p>
+                    <p class="poem-line line-15">Happy Birthday, gorgeous superstar, my favorite friend,</p>
+                    <p class="poem-line line-16">May your beauty, laughter, and blessings never end! 🥂👑🎉</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION - HOLOGRAPHIC MEMORY GALLERY -->
+        <section id="gallerySection" class="gallery-section-2035">
+            <h2 class="section-title-2035">The Abigail Lookbook // Big Screen Experience</h2>
+            <p style="text-align: center; color: var(--neon-cyan); margin-bottom: 24px; font-size: 0.95rem;">
+                📱 Optimized for mobile: Tap any photo or video below to open the HD full-screen viewer!
+            </p>
+            
+            <div class="gallery-grid-2035" id="galleryContainer">
+                <!-- Media dynamically populated from pics/ via script.js -->
+            </div>
+            
+            <!-- Holographic Image / Video Modal -->
+            <div id="imageModal" class="image-modal-2035 hidden">
+                <span class="modal-close-2035" aria-label="Close modal">&times;</span>
+                <div class="modal-frame" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 10px;">
+                    <img id="modalImage" src="" alt="Abigail Memory" style="max-width: 95vw; max-height: 82vh; object-fit: contain; border-radius: 18px; box-shadow: 0 10px 40px rgba(255, 71, 126, 0.45);">
+                    <video id="modalVideo" src="" controls playsinline style="max-width: 95vw; max-height: 82vh; display: none; border-radius: 18px; box-shadow: 0 10px 40px rgba(0, 240, 255, 0.45);"></video>
+                    <div class="modal-glow"></div>
+                </div>
+                <div class="modal-navigation-2035">
+                    <button id="prevBtn" class="nav-btn-2035">◀ Previous</button>
+                    <button id="nextBtn" class="nav-btn-2035">Next ▶</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL MESSAGE SECTION - THE COCKY, CHEESY, SWEET LETTER -->
+        <section id="messageSection" class="message-section-2035">
+            <div class="message-hologram">
+                <h2 class="section-title-2035">A Completely Serious (and Highly Flirty) Speech</h2>
+                
+                <div class="message-box-2035">
+                    <!-- Hero image for message section -->
+                    <div class="message-image-frame">
+                        <img src="pics/WhatsApp Image 2026-11-22 at 10.19.13 AM (1).jpeg" alt="Abigail Cute Moment" class="message-hero-image">
+                        <div class="message-frame-glow"></div>
+                    </div>
+                    
+                    <div class="message-content">
+                        <p class="message-text-2035"><strong>Dear Abigail,</strong></p>
+                        
+                        <p class="message-text-2035">First of all, happy birthday to the girl who effortlessly steals all the attention without even lifting a finger. I don't usually hand out compliments like candy, but when it comes to you? Let's just say the undeniable facts speak for themselves:</p>
+                        
+                        <ul class="birthday-wishes-2035" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 14px;"><span class="wish-icon">🔥</span> <strong>Fact #1: The Face Card is Untouchable.</strong> In inflation, in deflation, in bad weather—your face card has never declined once. Truly elite tier.</li>
+                            <li style="margin-bottom: 14px;"><span class="wish-icon">🧠</span> <strong>Fact #2: Dangerously Smart & Funny.</strong> Having this level of beauty is already unfair, but having elite banter and a brilliant mind on top of it? You're basically a real-life cheat code.</li>
+                            <li style="margin-bottom: 14px;"><span class="wish-icon">💅</span> <strong>Fact #3: My Immaculate Taste.</strong> Being your friend and having you in my life is proof that my personal taste in people is undefeated. You're welcome!</li>
+                            <li style="margin-bottom: 14px;"><span class="wish-icon">🎂</span> <strong>Fact #4: The Sweetness Hazard.</strong> A public notice to your birthday cake: don't feel too insecure today. Abigail is officially the sweetest thing in the room.</li>
+                        </ul>
+                        
+                        <p class="message-text-2035">
+                            <strong>Cheesy disclaimer:</strong> They say you should make a wish on your birthday, but honestly, knowing you already feels like having a wish granted. Keep shining, keep smiling that ridiculous toothy laugh, and keep being the irresistible superstar you are!
+                        </p>
+                        
+                        <p class="final-message-2035">Happy Birthday, Queen Abigail! Here's to more laughter, soft life, fat bank accounts, and endless wins! ✨👑🥂</p>
+                        
+                        <h3 class="birthday-sign-2035">Always With Love & Flirty Energy 💖</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CELEBRATION SECTION - HOLOGRAPHIC FINALE -->
+        <section id="celebrationSection" class="celebration-section-2035">
+            <canvas id="confettiCanvas"></canvas>
+            <div class="quantum-particles"></div>
+            
+            <div class="celebration-hologram">
+                <h2 class="celebration-title-2035">🎉 CELEBRATION MODE ACTIVATED 🎉</h2>
+                <p class="celebration-subtitle-2035" style="margin-bottom: 40px;">Make a huge wish, blow out the candles, and celebrate the incredible Abigail!</p>
+                
+                <div class="heartfelt-message" style="margin-top: 30px; margin-bottom: 35px; text-align: left; background: rgba(255, 255, 255, 0.06); padding: 32px 24px; border-radius: 24px; border: 1px solid rgba(255, 105, 180, 0.4); font-size: 1.05rem; line-height: 1.8; color: #eee; max-width: 680px; margin-left: auto; margin-right: auto; box-shadow: 0 15px 35px rgba(0,0,0,0.35);">
+                    <p style="font-size: 1.25rem; color: #ff69b4; font-weight: bold; margin-bottom: 14px;">To the one and only Abigail 🌟</p>
+                    <p>May this brand-new chapter bring you soft life, unbounded joy, deep peace of mind, high-paying opportunities, and people who constantly remind you how priceless you are.</p>
+                    <p>Stay fine, stay brilliant, keep laughing loud, and don't ever let anyone dull your shine!</p>
+                    <p style="font-size: 1.4rem; color: #00f0ff; font-weight: 800; text-align: center; margin-top: 25px; text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);">Happy Birthday Abigail! 🥂🎂💖</p>
+                </div>
+                
+                <div class="fireworks-grid" id="fireworks"></div>
+                
+                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                    <button class="neo-button" id="replayBtn">
+                        🎬 REPLAY CELEBRATION
+                    </button>
+                    <a href="BESTIE/index.html" class="neo-button" style="text-decoration: none; background: linear-gradient(135deg, #7c3aed, #ec4899); display: inline-flex; align-items: center;">
+                        🎮 PLAY BIRTHDAY QUEST
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- HOLOGRAPHIC AUDIO CONTROL -->
+    <div class="audio-control-2035">
+        <button id="musicToggle" class="holo-music-btn playing" title="Toggle music">
+            🔊 Birthday Music
+        </button>
+        <audio id="backgroundMusic" loop autoplay preload="auto">
+            <source src="birthday-music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- SCROLL INDICATOR & TOP BUTTON -->
+    <button id="scrollTop" class="scroll-top-btn-2035" title="Back to top">
+        ⬆
+    </button>
+    
+    <div class="scroll-indicator">
+        <div class="scroll-indicator-bar"></div>
+    </div>
+
+    <script src="script.js?v=3"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>

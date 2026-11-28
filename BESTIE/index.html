@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Abigail's Birthday Quest 🎮💖🎂</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        /* Mobile helper bar */
+        .mobile-top-bar {
+            position: absolute;
+            top: max(12px, env(safe-area-inset-top));
+            left: 12px;
+            z-index: 100;
+            display: flex;
+            gap: 8px;
+        }
+        .mini-btn {
+            background: rgba(255, 255, 255, 0.85);
+            color: #d81b60;
+            border: 1px solid rgba(255, 71, 126, 0.4);
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-size: 13px;
+            font-weight: 800;
+            text-decoration: none;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+        }
+        .mini-btn:active {
+            transform: scale(0.95);
+        }
+        .orientation-content {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 30px 24px;
+            border-radius: 24px;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="orientation-overlay">
+        <div class="orientation-content">
+            <div class="rotate-icon">📱 ➔ 🔄</div>
+            <h2>Mobile View Notice</h2>
+            <p>For the widest view and roomiest controls, landscape mode is awesome! Or tap below to play directly in portrait.</p>
+            <button id="dismissOrientationBtn" class="btn primary" style="margin-top: 18px;">Start Playing Now ➔</button>
+        </div>
+    </div>
+
+    <!-- Quick navigation bar -->
+    <div class="mobile-top-bar">
+        <a href="../index.html" class="mini-btn">🏠 Portal</a>
+        <a href="../wish.html" class="mini-btn">💌 Wish</a>
+    </div>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- HUD -->
+        <div id="hud" class="hidden">
+            <div class="hud-left">
+                <div id="hearts"></div>
+                <div class="collectible">🧁 <span id="cupcakeCount">0</span></div>
+                <div class="collectible">🎁 <span id="giftCount">0</span></div>
+            </div>
+            <div class="hud-center">
+                <div id="levelDisplay">Level 1</div>
+            </div>
+            <div class="hud-right">
+                <button id="pauseBtn" class="btn small-btn">⏸ Pause</button>
+            </div>
+        </div>
+
+        <!-- Overlays -->
+        <div id="menuOverlay" class="overlay active">
+            <div class="panel">
+                <h1 class="bounce-text">Abigail's Quest 🎮💖</h1>
+                <p>Jump, dodge the grumpy obstacles, and collect delicious cupcakes & hidden gifts to unlock secret flirty notes and memories!</p>
+                <button id="startBtn" class="btn primary">Start Adventure 🚀</button>
+                <button id="levelSelectBtn" class="btn" style="background: linear-gradient(135deg, #7209b7, #4361ee); color: white; display: none;">Select Level 🗺️</button>
+                <button id="instructionsBtn" class="btn">How to Play</button>
+                <button id="creditsBtn" class="btn">About Abigail</button>
+                <button id="homeBtn" class="btn" onclick="window.location.href='../index.html'" style="margin-top: 15px; background: #666; color: white;">Back to Portal 🏠</button>
+            </div>
+        </div>
+
+        <div id="levelSelectOverlay" class="overlay hidden">
+            <div class="panel level-select-panel">
+                <h2 style="color: #4361ee;">Select Starting Level 🗺️</h2>
+                <p style="color: #555; font-size: 14.5px; margin-bottom: 16px;">Abigail's Quest Conquered! Pick any world to replay:</p>
+                <div class="level-select-grid">
+                    <button class="level-choice-btn" data-level="1">🌸 Level 1: Birthday Meadow</button>
+                    <button class="level-choice-btn" data-level="2">🎁 Level 2: Gift Valley</button>
+                    <button class="level-choice-btn" data-level="3">🏰 Level 3: Castle of Charm</button>
+                    <button class="level-choice-btn" data-level="4">🏖️ Level 4: Sunset Beach Paradise</button>
+                    <button class="level-choice-btn" data-level="5">💎 Level 5: Glamour Boulevard</button>
+                    <button class="level-choice-btn" data-level="6">👑 Level 6: Queen's Coronation & Krakens</button>
+                </div>
+                <button id="backFromLevelSelectBtn" class="btn" style="margin-top: 16px;">Back to Menu</button>
+            </div>
+        </div>
+
+        <div id="instructionsOverlay" class="overlay hidden">
+            <div class="panel">
+                <h2>How to Play 🎮</h2>
+                <div class="instructions-content">
+                    <p><strong>Move:</strong> Tap on-screen ◀ and ▶ buttons (or Left/Right Arrows / A/D)</p>
+                    <p><strong>Jump:</strong> Tap ⬆ button (or Up Arrow / W / Space) — Double jump available!</p>
+                    <p><strong>Shoot:</strong> Tap 🔥 button (Destroys monsters and bosses!)</p>
+                    <p>🧁 <strong>Cupcakes:</strong> Give extra score and bonus lives!</p>
+                    <p>🎁 <strong>Gifts:</strong> Hidden throughout the worlds. Uncover them to reveal photos, videos, and flirty notes!</p>
+                </div>
+                <button id="backFromInstBtn" class="btn primary">Got It, Let's Play!</button>
+            </div>
+        </div>
+        
+        <div id="creditsOverlay" class="overlay hidden">
+            <div class="panel">
+                <h2>The Birthday Queen 👑</h2>
+                <p>Created with infinite flirty love, maximum cheese, and sincere appreciation for Abigail on her special day! 🎉</p>
+                <p>Dedicated to Abigail: the prettiest, funniest, and most charming superstar in our universe. ✨</p>
+                <button id="backFromCreditsBtn" class="btn primary">Back to Adventure</button>
+            </div>
+        </div>
+
+        <div id="confirmOverlay" class="overlay hidden">
+            <div class="panel">
+                <h2>Go Back?</h2>
+                <p>Do you want to move back to Level 1?</p>
+                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                    <button id="confirmYesBtn" class="btn primary">Yes</button>
+                    <button id="confirmNoBtn" class="btn">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="pauseOverlay" class="overlay hidden">
+            <div class="panel">
+                <h2>Paused ⏸</h2>
+                <button id="resumeBtn" class="btn primary">Resume</button>
+                <button id="restartBtn" class="btn">Restart Level</button>
+                <button id="menuBtn" class="btn">Main Menu</button>
+            </div>
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden">
+            <div class="panel">
+                <h2>Almost, Abigail! 💫</h2>
+                <p>Even queens stumble before conquering their kingdom. Shake it off and show these levels who's boss! 💪✨</p>
+                <button id="retryBtn" class="btn primary">Try Again 🔥</button>
+                <button id="goMenuBtn" class="btn">Main Menu</button>
+            </div>
+        </div>
+
+        <div id="victoryOverlay" class="overlay hidden">
+            <div class="panel victory-panel">
+                <h1 class="rainbow-text" id="victoryTitle">HAPPY BIRTHDAY ABIGAIL! 👑🎂🎉</h1>
+                
+                <!-- Congratulatory Card -->
+                <div class="samuel-congrats-card">
+                    <div class="samuel-card-header">
+                        <div class="samuel-avatar-badge">👑💖</div>
+                        <div class="samuel-header-text">
+                            <h3>A Royal Birthday Transmission 💌</h3>
+                            <span class="samuel-subtitle" id="samuelCardSubtitle">To The One & Only Abigail</span>
+                        </div>
+                    </div>
+                    <div class="samuel-message-body" id="samuelMessageBody">
+                        <p>“Queen Abigail! 👑 Huge congratulations on conquering the entire Birthday Quest! You grabbed every cupcake, unlocked all secret memories, and proved once and for all that you are completely unstoppable!</p>
+                        <p>May this brand-new year bring you endless happiness, peace of mind, big wins, soft life, and unforgettable memories. Now head over to the full celebration for the music, the photos, and the confetti! 🥂💖✨”</p>
+                        <div class="samuel-signature">With Lots of Love & Flirty Energy ✨</div>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <p id="statsSubtitle" style="font-size: 19px; color: var(--primary); margin-bottom: 8px;">🏆 Abigail's Quest: Conquered! 🏆</p>
+                    <p>🧁 Cupcakes Collected: <span id="finalCupcakes">0</span></p>
+                    <p>🎁 Gifts Found: <span id="finalGifts">0</span></p>
+                    <p>⏱️ Play Time: <span id="finalTime">00:00</span></p>
+                </div>
+                
+                <div class="victory-actions">
+                    <button id="nextLevelBtn" class="btn primary" style="background: linear-gradient(135deg, #00b4d8, #0077b6); font-size: 17px; padding: 13px 22px; box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4); display: none;">Proceed to Next Level 🏖️</button>
+                    <button id="replayBtn" class="btn primary">Play Again 🔄</button>
+                    <button id="celebrateBtn" class="btn" onclick="window.location.href='../wish.html'" style="background: linear-gradient(135deg, #ff477e, #ff7096); color: white;">Full Birthday Celebration ✨</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Secret Message / Gift Overlay with Large Media Dimensions -->
+        <div id="messageOverlay" class="overlay hidden">
+            <div class="panel message-panel">
+                <h2 style="font-family: 'Fredoka One', cursive; color: #ff477e; margin-bottom: 10px;">A Secret Note for Abigail 💖</h2>
+                <div id="messagePic" class="hidden">
+                    <img src="" id="secretPic" alt="Secret Memory">
+                    <video id="secretVid" src="" controls playsinline style="max-width: 100%; display: none;"></video>
+                </div>
+                <p id="messageText" style="font-size: 1.05rem; line-height: 1.6; color: #333; margin: 12px 0;"></p>
+                <button id="closeMsgBtn" class="btn primary">Continue Adventure 🚀</button>
+            </div>
+        </div>
+
+        <!-- Mobile Controls (Visible on Touch & Mobile devices) -->
+        <div id="mobileControls" class="hidden">
+            <div class="dpad">
+                <button id="btnLeft" class="control-btn" aria-label="Move left">◀</button>
+                <button id="btnRight" class="control-btn" aria-label="Move right">▶</button>
+            </div>
+            <div class="action-buttons">
+                <button id="btnShoot" class="control-btn action-btn" aria-label="Shoot">🔥</button>
+                <button id="btnJump" class="control-btn action-btn" aria-label="Jump">⬆</button>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="bgm" loop preload="auto">
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="game.js?v=3"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>

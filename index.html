@@ -1,12 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Happy Birthday Abigail ✨</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100svh;font-family:'DM Sans',sans-serif;color:#35203e;background:radial-gradient(circle at 20% 10%,#fff 0 5%,#ffdce9 22%,transparent 46%),linear-gradient(145deg,#f9a8d4,#c4b5fd 58%,#67e8f9);overflow-x:hidden}.stars{position:fixed;inset:0;pointer-events:none}.star{position:absolute;color:white;animation:twinkle 2.5s infinite alternate}@keyframes twinkle{to{opacity:.25;transform:scale(.7)}}
-main{position:relative;z-index:2;width:min(920px,calc(100% - 28px));margin:auto;min-height:100svh;display:grid;align-content:center;padding:28px 0}.card{background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.9);border-radius:28px;box-shadow:0 24px 70px rgba(79,35,105,.22);padding:38px;text-align:center;backdrop-filter:blur(16px)}
-.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;color:#9d3e79;font-weight:800}.hero{font-family:Pacifico,cursive;font-size:clamp(2.7rem,10vw,5.3rem);line-height:1.05;margin:10px 0 12px;color:#a21caf;text-shadow:0 4px 0 #fff,0 8px 24px rgba(162,28,175,.18)}.intro{max-width:650px;margin:0 auto 24px;line-height:1.65;color:#64466a;font-size:clamp(.95rem,3vw,1.08rem)}
-.options{display:grid;grid-template-columns:1fr 1fr;gap:16px}.option{min-height:170px;border:0;border-radius:22px;padding:20px;text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(73,38,94,.18);transition:.18s transform,.18s box-shadow}.option:active{transform:scale(.97)}.option.game{background:linear-gradient(145deg,#7c3aed,#ec4899)}.option.wish{background:linear-gradient(145deg,#f97316,#e11d48)}.icon{font-size:44px;margin-bottom:8px}.title{font-size:1.2rem;font-weight:800}.desc{font-size:.88rem;opacity:.92;margin-top:6px;line-height:1.35}
-@media(max-width:600px){main{padding:14px 0}.card{border-radius:24px;padding:26px 16px}.options{grid-template-columns:1fr}.option{min-height:145px}.hero{font-size:3.25rem}.intro{margin-bottom:18px}}
-</style></head><body><div class="stars" id="stars"></div><main><section class="card"><div class="eyebrow">A tiny universe made just for you</div><h1 class="hero">Happy Birthday, Abigail! 🎂</h1><p class="intro">Today, the world gets to celebrate the gorgeous, clever, wildly lovable human that is you. Abigail, consider this your official warning: your smile is powerful, your vibe is elite, and yes, I am absolutely allowed to say the pretty ones deserve extra cake. Choose your adventure, birthday superstar! 💖</p><div class="options"><a class="option game" href="game.html"><span class="icon">🎮</span><span class="title">Abigail's Adventure</span><span class="desc">Collect cupcakes, dodge trouble, and unlock flirty birthday secrets.</span></a><a class="option wish" href="wish.html"><span class="icon">💌</span><span class="title">The Birthday Wish</span><span class="desc">A sweet, silly and slightly suspiciously romantic celebration.</span></a></div></section></main><script>for(let i=0;i<35;i++){let s=document.createElement('span');s.className='star';s.textContent=i%5?'✦':'♥';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(8+Math.random()*15)+'px';s.style.animationDelay=Math.random()*2+'s';document.getElementById('stars').appendChild(s)}</script></body></html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Happy Birthday Abigail! 🎂💖✨</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Sleek Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff477e;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff2a6d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at 15% 15%, #ffd6e0 0%, transparent 40%),
+                        radial-gradient(circle at 85% 85%, #c7d2fe 0%, transparent 45%),
+                        linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fbc2eb 100%);
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            padding: 24px 14px;
+        }
+
+        /* Floating Bubbles & Sparkles */
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -120px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 182, 193, 0.35));
+            border-radius: 50%;
+            animation: rise 11s infinite ease-in;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(0) scale(0.9); opacity: 0; }
+            30% { opacity: 0.9; }
+            80% { opacity: 0.8; }
+            100% { transform: translateY(-115vh) scale(1.4); opacity: 0; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 42px 30px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(179, 38, 107, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+            text-align: center;
+            max-width: 640px;
+            width: 100%;
+            border: 3px solid rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            margin: auto;
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.92); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #fff0f5, #ffe4e6);
+            border: 1.5px solid #ff477e;
+            border-radius: 999px;
+            padding: 7px 18px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #d81b60;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(216, 27, 96, 0.12);
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            color: #d81b60;
+            font-size: clamp(2.3rem, 7vw, 3.4rem);
+            margin-bottom: 12px;
+            line-height: 1.15;
+            text-shadow: 2px 2px 0 #ffd166, 0 8px 24px rgba(216, 27, 96, 0.18);
+        }
+
+        .flirty-tagline {
+            color: #7928ca;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .intro {
+            color: #4a284e;
+            font-size: clamp(0.98rem, 2.8vw, 1.12rem);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 26px 18px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 24px rgba(70, 30, 80, 0.09);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, transparent, rgba(255, 71, 126, 0.25));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .card:hover, .card:active {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        .card.game-card:hover, .card.game-card:active {
+            box-shadow: 0 18px 32px rgba(99, 102, 241, 0.28);
+            border-color: #6366f1;
+        }
+
+        .card.wish-card:hover, .card.wish-card:active {
+            box-shadow: 0 18px 32px rgba(255, 71, 126, 0.32);
+            border-color: #ff477e;
+        }
+
+        .card-icon {
+            font-size: 3.4rem;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-icon, .card:active .card-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .card-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+        }
+        
+        .card.game-card .card-title {
+            color: #4f46e5;
+        }
+
+        .card.wish-card .card-title {
+            color: #e11d48;
+        }
+
+        .card-desc {
+            font-size: 0.88rem;
+            color: #605068;
+            line-height: 1.45;
+        }
+
+        .card-cta {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 999px;
+            color: white;
+            transition: opacity 0.2s;
+        }
+
+        .card.game-card .card-cta {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+
+        .card.wish-card .card-cta {
+            background: linear-gradient(135deg, #ec4899, #f43f5e);
+        }
+
+        .footer-note {
+            margin-top: 28px;
+            font-size: 0.85rem;
+            color: #83678b;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 10px;
+                align-items: flex-start;
+            }
+            .container {
+                padding: 30px 18px;
+                border-radius: 24px;
+                margin-top: 8px;
+                margin-bottom: 16px;
+            }
+            h1 { font-size: 2.2rem; }
+            .options-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .card {
+                padding: 22px 16px;
+                min-height: 135px;
+            }
+            .card-icon {
+                font-size: 2.9rem;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bubbles" id="bubbles"></div>
+
+    <main class="container">
+        <div class="badge">🌸 Certified 10/10 Birthday Zone 🌸</div>
+        <h1>Happy Birthday Abigail! 🎂💖</h1>
+        <span class="flirty-tagline">Warning: Dangerously Lethal Face Card Ahead ✨</span>
+        
+        <p class="intro">
+            Today the world celebrates the effortlessly gorgeous, brilliant, and wildly lovable human that is <strong>Abigail</strong>. 
+            I've prepared two special birthday experiences for you—which one are you stepping into first, birthday queen?
+        </p>
+        
+        <div class="options-grid">
+            <a href="BESTIE/index.html" class="card game-card">
+                <div class="card-icon">🎮</div>
+                <div class="card-title">Abigail's Quest</div>
+                <div class="card-desc">Jump through 6 colorful worlds, collect cupcakes, smash enemies, and unlock secret flirty notes & photos!</div>
+                <div class="card-cta">Play Game ➔</div>
+            </a>
+            
+            <a href="wish.html" class="card wish-card">
+                <div class="card-icon">💌</div>
+                <div class="card-title">The Birthday Wish</div>
+                <div class="card-desc">The grand celebration: festive music, interactive Abigail lookbook, confetti rain, and a delightfully cheesy letter.</div>
+                <div class="card-cta">Open Wish ➔</div>
+            </a>
+        </div>
+
+        <p class="footer-note">Handcrafted with flirty love, maximum cheese, and exceptional taste. You're welcome! 😉✨</p>
+    </main>
+
+    <script>
+        // Generate floating bubbles
+        const bubbleContainer = document.getElementById('bubbles');
+        const bubbleCount = 20;
+        
+        for (let i = 0; i < bubbleCount; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            
+            const size = Math.random() * 60 + 20;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * 100}%`;
+            bubble.style.animationDuration = `${Math.random() * 6 + 7}s`;
+            bubble.style.animationDelay = `${Math.random() * 5}s`;
+            
+            bubbleContainer.appendChild(bubble);
+        }
+    </script>
+</body>
+</html>
